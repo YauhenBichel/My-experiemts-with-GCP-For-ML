@@ -1,0 +1,15 @@
+# set the value to the following placeholders
+
+PROJECT_ID=tactile-rigging-352016 
+REGION=us-central1  
+REPOSITORY=your_repository 
+IMAGE=your_image_name 
+
+#make sure you are inside the folder in which you dockerfile is present.
+#login to docker, if you are not logged in
+
+docker login
+
+#build docker image, if you get error , try providing the values directly instead of using placeholders
+
+docker build --tag=$REGION-docker.pkg.dev/$PROJECT_ID/$REPOSITORY/$IMAGE .
